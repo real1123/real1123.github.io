@@ -1,0 +1,266 @@
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    line-height: 1.6;
+    font-family: -apple-system-font, Helvetica Neue, sans-serif;
+    line-height: normal;
+    height: 100%;
+    width: 100%;
+    overflow: hidden
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: 400;
+    margin: 0;
+    padding: 0
+}
+
+.hydrated {
+    visibility: inherit
+}
+
+.home-header, .modal {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.modal {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .8);
+    -webkit-backdrop-filter: blur(.125rem);
+    backdrop-filter: blur(.125rem);
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+taro-view-core {
+    display: block
+}
+
+.scan-modal {
+    width: 14.9rem;
+    position: relative
+}
+
+.scan-modal__header {
+    width: 100%;
+    padding: .475rem 0 .95rem;
+    background: -webkit-linear-gradient(318deg, #ffd56a 0, #ff642e 73%, #d8193d 100%);
+    background: -o-linear-gradient(318deg, #ffd56a 0, #ff642e 73%, #d8193d 100%);
+    background: linear-gradient(132deg, #ffd56a 0, #ff642e 73%, #d8193d 100%);
+    border-radius: .575rem .575rem 0 0;
+    margin-bottom: -.475rem;
+    text-align: center;
+    -webkit-animation: fadeInUp .5s;
+    animation: fadeInUp .5s
+}
+
+.scan-modal__text35 {
+    font-weight: 600;
+    color: #fff;
+    font-size: .875rem
+}
+
+.scan-modal__mb10 {
+    margin-bottom: .25rem
+}
+
+.scan-modal__text19 {
+    font-weight: 600;
+    color: #fff;
+    font-size: .475rem;
+    text-align: center;
+}
+
+.scan-modal__mb4 {
+    margin-bottom: .1rem
+}
+
+.scan-modal__body {
+    padding-top: .475rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    background: -webkit-linear-gradient(271deg, #ebebeb 0, #ebebeb 5%, rgba(255, 255, 255, .4) 23%, rgba(255, 255, 255, .11) 57%, rgba(255, 255, 255, .05) 76%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(271deg, #ebebeb 0, #ebebeb 5%, rgba(255, 255, 255, .4) 23%, rgba(255, 255, 255, .11) 57%, rgba(255, 255, 255, .05) 76%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(179deg, #ebebeb 0, #ebebeb 5%, rgba(255, 255, 255, .4) 23%, rgba(255, 255, 255, .11) 57%, rgba(255, 255, 255, .05) 76%, rgba(255, 255, 255, 0) 100%);
+    border-radius: .575rem
+}
+
+.scan-modal__light {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0
+}
+
+.scan-modal__light1 {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    -webkit-animation-name: fadeInOut;
+    animation-name: fadeInOut;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s
+}
+
+taro-image-core {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 0
+}
+
+.scan-modal__img {
+    width: 11.55rem;
+    height: 11.55rem;
+    -webkit-animation-name: shakeY;
+    animation-name: shakeY;
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s
+}
+
+.taro-img__mode-aspectfit {
+    max-width: 100%;
+    max-height: 100%
+}
+
+.scan-modal__btn {
+    width: 12.025rem;
+    height: 2.175rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: -webkit-gradient(linear, right top, left top, from(#d8193d), color-stop(47%, #ff7d1e), to(#ffd56a));
+    background: -webkit-linear-gradient(right, #d8193d 0, #ff7d1e 47%, #ffd56a 100%);
+    background: -o-linear-gradient(right, #d8193d 0, #ff7d1e 47%, #ffd56a 100%);
+    background: linear-gradient(270deg, #d8193d 0, #ff7d1e 47%, #ffd56a 100%);
+    -webkit-box-shadow: 0 .15rem .3rem rgba(0, 0, 0, .2);
+    box-shadow: 0 .15rem .3rem rgba(0, 0, 0, .2);
+    border-radius: 1.1rem;
+    font-size: .875rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: .95rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.scan-modal__close {
+    width: 1.2rem;
+    height: 1.2rem;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    bottom: -2.825rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+@-webkit-keyframes shakeY {
+    0%, to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translate3d(0, -.25rem, 0);
+        transform: translate3d(0, -.25rem, 0)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translate3d(0, .25rem, 0);
+        transform: translate3d(0, .25rem, 0)
+    }
+}
+
+@keyframes shakeY {
+    0%, to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translate3d(0, -.25rem, 0);
+        transform: translate3d(0, -.25rem, 0)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translate3d(0, .25rem, 0);
+        transform: translate3d(0, .25rem, 0)
+    }
+}
+
+.img img {
+    width: 100%;
+    height: 100%
+}
+
+.scan-modal__top {
+    position: absolute;
+    left: 0;
+    top: 1.975rem;
+    z-index: 1;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.scan-modal__tip {
+    width: 12.925rem;
+    height: 2.175rem;
+    background: url(kuang.png) no-repeat;
+    background-size: contain;
+    margin-left: .475rem;
+    font-size: .775rem;
+    white-space: nowrap;
+    font-weight: 700;
+    color: #fff;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 1.2rem;
+}
+
+.scan-modal__fenghuang {
+    width: 3.95rem;
+    height: 3.95rem;
+    margin-left: 12.5rem;
+}
+
+.scan-modal__mt19 {
+    margin-top: .475rem;
+}

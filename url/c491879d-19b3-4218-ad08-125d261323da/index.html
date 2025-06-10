@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="hydrated" style="font-size: 19.2px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
+</head>
+<body>
+<div class="img"><img src="../../static/img/bg.png"></div>
+<taro-view-core class="modal hydrated">
+    <taro-view-core class="hydrated">
+        <taro-view-core class="scan-modal hydrated">
+            <taro-view-core class="scan-modal__top hydrated">
+                <taro-view-core class="scan-modal__tip hydrated">前往探索社区，发现更多精彩</taro-view-core>
+                <taro-image-core class="scan-modal__fenghuang hydrated" mode="aspectFit" src="../../static/img/br.png">
+                    <img class="taro-img__mode-aspectfit" src="../../static/img/br.png">
+                </taro-image-core>
+            </taro-view-core>
+            <taro-view-core class="scan-modal__header hydrated">
+                <taro-view-core class="scan-modal__text35 scan-modal__mb10 hydrated">
+                    该产品为RELX悦刻正品
+                </taro-view-core>
+                <taro-view-core class="scan-modal__text19 scan-modal__mb4 hydrated">悦刻幻影雾化弹-3颗装--30mg/g-中文版</taro-view-core>
+            </taro-view-core>
+            <taro-view-core class="scan-modal__body hydrated">
+                <taro-view-core class="scan-modal__light hydrated">
+                    <taro-image-core class="scan-modal__light1 hydrated" mode="aspectFit" src="../../static/img/guang.png">
+                        <img class="taro-img__mode-aspectfit" src="../../static/img/guang.png">
+                    </taro-image-core>
+                    <taro-image-core class="scan-modal__light2 hydrated" mode="aspectFit" src="../../static/img/guang2.png">
+                        <img class="taro-img__mode-aspectfit" src="../../static/img/guang2.png">
+                    </taro-image-core>
+                </taro-view-core>
+                <taro-image-core mode="aspectFit" class="scan-modal__img hydrated" src="../../static/img/zheng.png">
+                    <img class="taro-img__mode-aspectfit" src="../../static/img/zheng.png">
+                </taro-image-core>
+                <taro-view-core class="scan-modal__text35 scan-modal__mb10 hydrated">该二维码第<span id="openCount9">1</span>次被扫</taro-view-core>
+                <taro-view-core class="scan-modal__text19 hydrated">勋章已在首次扫码时完成领取</taro-view-core>
+                <taro-view-core class="scan-modal__btn hydrated" onclick="Goshequ()">前往社区</taro-view-core>
+            </taro-view-core>
+            <taro-view-core class="scan-modal__text19 scan-modal__mt19 hydrated">
+                95%的用户已在社区内探索精彩内容
+            </taro-view-core>
+            <taro-image-core class="scan-modal__close hydrated" src="../../static/img/close.png" mode="aspectFit" onclick="ClosePage()">
+                <img class="taro-img__mode-aspectfit" src="../../static/img/close.png">
+            </taro-image-core>
+        </taro-view-core>
+    </taro-view-core>
+</taro-view-core>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const openCount9Element = document.getElementById('openCount9');
+        const now = new Date().getTime(); // 当前时间戳
+        const lastVisitTime9 = localStorage.getItem('lastVisitTime9'); // 上次访问时间
+        const twoMinutes = 2 * 60 * 1000; // 2分钟的毫秒数
+
+        // 如果上次访问时间不存在，或超过2分钟，重置计数
+        if (!lastVisitTime9 || (now - lastVisitTime9 > twoMinutes)) {
+            localStorage.setItem('openCount9', 1);
+            localStorage.setItem('lastVisitTime9', now);
+            openCount9Element.textContent = 1;
+        } 
+        // 否则正常累加
+        else {
+            let count = parseInt(localStorage.getItem('openCount9')) || 0;
+            count++;
+            localStorage.setItem('openCount9', count);
+            localStorage.setItem('lastVisitTime9', now);
+            openCount9Element.textContent = count;
+        }
+    });
+
+    function ClosePage() {
+        window.opener = null;
+        window.open('', '_self');
+        window.close();
+        if (typeof WeixinJSBridge !== 'undefined') {
+            WeixinJSBridge.call('closeWindow');
+        }
+    }
+
+    function Goshequ() {
+        window.location.replace('https://crm.relxtech.com/api/s?c=98EJ3NMX6CCD37');
+    }
+</script>
+
+</body>
+</html>
